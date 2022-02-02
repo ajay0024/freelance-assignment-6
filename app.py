@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
-from flask_restful import reqparse, abort, Api, Resource, fields, marshal
+from flask_restful import abort, Api, Resource, fields, marshal
 
 app = Flask(__name__)
 api = Api(app)
@@ -40,7 +40,7 @@ class Enrollment(db.Model):
 
 
 # db.create_all()
-parser = reqparse.RequestParser()
+
 
 
 def abort_error(error_code, error_message):
